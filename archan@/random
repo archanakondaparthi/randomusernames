@@ -1,0 +1,21 @@
+import random
+import string
+adjectives = [ "Clever", "Brave", "Swift", "Mighty", "Happy", "Crazy", "Energetic", "Gentle", "Witty", "Bold", "Sneaky", "Loyal", "Charming", "Fierce", "Jolly", "Daring", "Cunning", "Zany", "Cheerful", "Grumpy" ]
+
+nouns = [ "Lion", "Tiger", "Eagle", "Falcon", "Panda", "Cheetah", "Wizard", "Ninja", "Samurai", "Pirate", "Dragon", "Phoenix", "Knight", "Rogue", "Viking", "Warrior", "Fox", "Shadow", "Wolf", "Hawk" ]
+
+def generate_username(length=8): 
+    """Generate a fun and creative random username.""" 
+    letter = string.ascii_letters
+    digits = string.digits
+    adjective = random.choice(adjectives)  
+    noun = random.choice(nouns)  
+    number = random.randint(1, 999)  
+    username = f"{adjective}{noun}{number}" 
+    return username
+
+
+if _name_ == "_main_": 
+    print("Here are some fun username options for you:") 
+    for _ in range(1):  
+      print(generate_username())
